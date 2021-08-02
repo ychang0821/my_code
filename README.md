@@ -1,5 +1,3 @@
-# my_code
-All my code from Alta3's Python course!
 # my_code (Project Title)
 
 One Paragraph of your project description goes here. Describe what you're trying to do.
