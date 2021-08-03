@@ -11,11 +11,11 @@ marvelchars= {
   "powers": "shape shifter",
   "archenemy": "Professor X"},
 
-"she-Hulk":
+"she-hulk":
   {"real name": "jennifer walters",
   "powers": "super strength & intelligence",
   "archenemy": "Titania"}
-             }
+}
 
 char_name = input(" Which character do you want to know about? (Starlord, Mystique, She-Hulk)").lower()
 
