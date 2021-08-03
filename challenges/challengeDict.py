@@ -21,5 +21,5 @@ char_name = input(" Which character do you want to know about? (Starlord, Mystiq
 
 char_stat = input(" What statistic do you want to know about? (real name, powers, archenemy)")
 
-value = marvelchars.get(char_name).get(char_stat)
+value = marvelchars.get(char_name).get(char_stat).title()
 print(f"{char_name}'s {char_stat} is : {value})")
