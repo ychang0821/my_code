@@ -20,6 +20,8 @@ marvelchars= {
 char_name = input(" Which character do you want to know about? (Starlord, Mystique, She-Hulk)")
 
 char_stat = input(" What statistic do you want to know about? (real name, powers, archenemy)")
-
-value = marvelchars.get(char_name).get(char_stat).title()
+if char_stat == "real name":
+  value = marvelchars.get(char_name).get(char_stat).title()
+else:
+  value = marvelchars.get(char_name).get(char_stat)
 print(f"{char_name}'s {char_stat} is : {value})")
