@@ -11,6 +11,7 @@ def introduction():
 
 def makechoice():
     num = 0
+
     total_waste = 0
     while num < 7:
         if num == 0:
@@ -113,4 +114,5 @@ def main():
             replay = False
     print("Thanks for playing! Enjoy everyday of your life!")
 
-main()
+if __name__ == "__main__":
+    main()
