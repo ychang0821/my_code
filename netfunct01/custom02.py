@@ -18,7 +18,7 @@ def commandpush(devicecmd): # devicecmd==dict
 #function to loop lists of ips
 def devicerboot(iplist):
     for ip in iplist:
-        print(f"Connecting to {ip}, REBOOTING NOW!")
+        print(f"Connecting to... {ip}\nREBOOTING NOW!")
 
 # start our main script
 def main():
@@ -28,7 +28,7 @@ def main():
     devicecmd = {"10.1.0.1":["interface eth1/2", "no shutdown"], "10.2.0.1":
     ["interface eth1/1", "shutdown"], "10.3.0.1":["interface eth1/5", "no shutdown"]}
 
-    iplist = ["10.1.0.1", "10.2.0.1", "10.3.0.1"]
+    iplist = list(devicecmd.keys())
     print(f"Welcome to the {crayons.blue('Network')} Device Command Pusher") # welcome message with blue text
 
     ## get data set
