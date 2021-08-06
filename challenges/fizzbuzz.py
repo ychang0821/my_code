@@ -26,8 +26,7 @@ def fizzbuzz(numberlist):
     return {"Fizzes": Fizzes, "Buzzes": Buzzes, "FizzBuzzes": FizzBuzzes}
     
 def main():
-    numberlist = getnumbers()
-    print(fizzbuzz(numberlist))
+    print(fizzbuzz(getnumbers()))
 
 if __name__ == "__main__":
     main()
