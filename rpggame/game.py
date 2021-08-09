@@ -194,7 +194,7 @@ while True:
 
   if move[0] == 'get' :
     #if the room contains an item, and the item is the one they want to get
-    if len(rocksack) > 10:
+    if len(rocksack) >= 10:
       print('Full rocksack, Can\'t get ' + move[1] + '!' + 'drop something first')
 
     elif "item" in cities[currentCity] and move[1] in cities[currentCity]['item']:
