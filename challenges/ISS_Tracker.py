@@ -4,13 +4,13 @@ import requests
 import time
 import reverse_geocoder
   
-URL= "http://api.open-notify.org/astros.json"
+URL= "http://api.open-notify.org/iss-now.json"
 def main():
     # requests.get() sends GET request to the URL
     # .json() strips JSON off the response and translates into Python!
     resp= requests.get(URL).json()
-    lon = resp["iss_position"]["longitude"]
-    lat = resp["iss_position"]["latitude"]
+    lon = resp.get("iss_position")["longitude"]
+    lat = resp.get("iss_position")["latitude"]
     ts = resp["timestamp"]
 
     # string from time
