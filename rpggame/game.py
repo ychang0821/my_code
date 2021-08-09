@@ -56,7 +56,6 @@ Commands:
   go [direction]
   get [item]
   drop [item]
-  map
 ''')
 
 def showStatus():
@@ -89,10 +88,10 @@ def launch():
       return False  
   return True
 
-def show_map():
-  for key in cities[currentCity]:
-    if key != "item":
-      print(f"{key} : {cities[currentCity][key]}")
+# def show_map():
+#   for key in cities[currentCity]:
+#     if key != "item":
+#       print(f"{key} : {cities[currentCity][key]}")
 
 def getMap():
   map = {
@@ -203,7 +202,7 @@ while True:
       rocksack += [move[1]]
       #display a helpful message
       print(move[1] + ' got!')
-      #delete the item from the room
+      #delete the item from the city
       cities[currentCity]['item'].remove(move[1])
     #otherwise, if the item isn't there to get
     else:
@@ -220,10 +219,10 @@ while True:
       print('Can\'t drop ' + move[1] + '!')
       
 
-  if move[0] == 'map':
-    show_map()
-  ## Define how a player can win
+  # if move[0] == 'map':
+  #   show_map()
 
+  ## Define how a player can win
   if currentCity == 'JBLM':
     launchable = launch()
     if launchable == True:
