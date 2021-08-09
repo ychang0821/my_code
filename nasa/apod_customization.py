@@ -17,7 +17,7 @@ def main():
     nasacreds = "api_key=" + nasacreds.strip("\n")
 
     date = input("Please enter the date(YYYY-MM-DD): ")
-    date = "date=" + date.strip()
+    date = "&date=" + date
     ## Call the webservice with our key
     apodurlobj = urllib.request.urlopen(NASAAPI + nasacreds + date)
 
