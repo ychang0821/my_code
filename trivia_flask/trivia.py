@@ -23,6 +23,8 @@ def check():
     if request.form.get("an") and request.form.get("an").lower() == "soccer":
         return redirect(url_for("correct", answer = request.form.get("an").lower()))
 
+    elif request.json.get("an") and request.json.get("an").lower() == "soccer":
+        return redirect(url_for("correct", answer = request.json.get("an").lower()))
     else:
         return redirect(url_for("start")) 
     
