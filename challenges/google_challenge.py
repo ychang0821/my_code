@@ -10,7 +10,9 @@ directory = "slappy"
 parent_dir = "/home/student/mycode"
 
 path = os.path.join(parent_dir, directory)
-
-os.mkdir(path)
+if not os.path.exists("/home/student/mycode/slappy"):
+    os.mkdir(path)
+f = open("/home/student/mycode/slappy/chad_stop_using_that_word.txt", "a")
+f.close()
 print("Directory '% s' created" % directory)
 
